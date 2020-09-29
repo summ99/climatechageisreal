@@ -1,0 +1,56 @@
+body, html{
+  margin: 0px;
+}
+.menu {
+  /*    display: block; */
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    top:0;
+    display: block;
+    background-image: linear-gradient(to bottom right, #8b9dc3, white);
+} /* menu overlaps background image in subcontainer, background color of menu is a gradient from a blue to white tone*/
+.menu a{
+  color: white;
+  margin-left:0;
+  float:left;
+  padding: 10px;
+  font-size:15px;
+} /* menu items aligned to the left and centered vertically within the div*/
+
+.subContainer{
+  height: 450px;
+  width: 100%;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center center;
+} /* background image stretched to cover whole screen*/
+
+.header{
+  padding-top: 80px;
+  text-align: center;
+  color: white;
+  /* centers header text in the div compartment*/
+}
+
+.siteIcon {
+  position: fixed;
+  background-image: url("globe.png");
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  top: 0px;
+  right: 0px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  /*the above specifies position and size of icon image*/
+}
+
+.images img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 340px;
+} /* the above centers each image on the page*/
