@@ -1,38 +1,41 @@
 body, html{
   margin: 0px;
 }
+.bodyContent p{
+  display: flex;
+  font-size: 2.5vmin;
+  padding-top: 3vmin;
+  padding-bottom: 3vmin;
+}
 .menu {
-  /*    display: block; */
-    position: fixed;
-    height: 40px;
-    width: 100%;
-    top:0;
-    display: block;
+    display: flex;
+    padding: 1vmin;
+    font-size: 2.5vmin;
+    justify-content: space-around;
     background-image: linear-gradient(to bottom right, #8b9dc3, white);
-} /* menu overlaps background image in subcontainer, background color of menu is a gradient from a blue to white tone*/
+} /* menu overlaps background image in subcontainer, background color of menu is a gradient from a blue to white tone;
+     used justify content to maintain equal space between each menu option*/
 .menu a{
   color: white;
-  margin-left:0;
-  float:left;
-  padding: 10px;
-  font-size:15px;
-} /* menu items aligned to the left and centered vertically within the div*/
-
+}
 .subContainer{
-  height: 450px;
-  width: 100%;
+  display: flex;
+  flex-direction:column;
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center center;
-} /* background image stretched to cover whole screen*/
-
-.header{
-  padding-top: 80px;
-  text-align: center;
+  height: 80vh;
   color: white;
-  /* centers header text in the div compartment*/
+  font-size: 2.5vmin;
+  justify-content:center;
+ /* background image stretched to cover whole screen*/
 }
-
+.header h1, h2{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 4vmin;
+}
 .siteIcon {
   position: fixed;
   background-image: url("globe.png");
@@ -41,16 +44,70 @@ body, html{
   height: 75px;
   top: 0px;
   right: 0px;
-  margin: 10px;
+  margin: 3vmin;;
   text-align: center;
   line-height: 75px;
   /*the above specifies position and size of icon image*/
 }
+.bodyContainer{
+  display:flex;
+  height: 150vh;
+  font-size: 2.5vmin;
+}
+.articleContent{
+  width: 100vw;
+  height: 150vh;
+  flex-direction: column;
 
-.images img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 340px;
+}
+.articlePics{
+  flex-direction:column;
+  justify-content: center;
+  width: 50vw;
+}
+.section{
+  height: 50vh;
+  margin-top:3vmin;
+  padding-left: 3vmin;
+  padding-bottom: 3vmin;
+  flex-direction: row;
+  border-bottom: 2px solid #8b9dc3;
+}
+.articlePics img, iframe{
+  width: 40vw;
+  margin-top:3vmin;
+  padding-bottom: 3vmin;
+  height: 50vh;
+  border-bottom: 2px solid #8b9dc3;
 } /* the above centers each image on the page*/
+.resourceBody{
+  display:flex;
+  height: 50vh;
+  font-size: 2.5vmin;
+}
+.names{
+  flex-direction:column;
+  justify-content: center;
+  width: 50vw;
+}
+.names p{
+  height: 10vh;
+  margin-top:3vmin;
+  padding-left: 3vmin;
+  padding-bottom: 3vmin;
+  flex-direction: row;
+  border-bottom: 2px solid #8b9dc3;
+}
+.siteLinks {
+  flex-direction:column;
+  justify-content: center;
+  width: 50vw;
+}
+.siteLinks p{
+  height: 10vh;
+  margin-top:3vmin;
+  padding-left: 3vmin;
+  padding-bottom: 3vmin;
+  flex-direction: row;
+  border-bottom: 2px solid #8b9dc3;
+}
