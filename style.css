@@ -13,8 +13,8 @@ body, html{
     font-size: 2.5vmin;
     justify-content: space-around;
     background-image: linear-gradient(to bottom right, #8b9dc3, white);
-} /* menu overlaps background image in subcontainer, background color of menu is a gradient from a blue to white tone;
-     used justify content to maintain equal space between each menu option*/
+} /* menu overlaps background image in subcontainer, background color of menu is
+a gradient from a blue to white tone;used justify content to maintain equal space between each menu option*/
 .menu a{
   color: white;
 }
@@ -28,14 +28,21 @@ body, html{
   color: white;
   font-size: 2.5vmin;
   justify-content:center;
- /* background image stretched to cover whole screen*/
+ /* subContainer includes header and the section with a background image
+ stretched to cover whole width of screen*/
 }
-.header h1, h2{
+.header h1{
   display: flex;
   justify-content:center;
   align-items:center;
-  font-size: 4vmin;
+  font-size: 6vmin;
 }
+.header h2{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 3vmin;
+}/* Both title and subheading are centered; The subheading is smaller than title of page */
 .siteIcon {
   position: fixed;
   background-image: url("globe.png");
@@ -47,39 +54,48 @@ body, html{
   margin: 3vmin;;
   text-align: center;
   line-height: 75px;
-  /*the above specifies position and size of icon image*/
+  /*not flexed;the above specifies position and size of icon image*/
 }
-.bodyContainer{
+.bodyContent {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+} /* container for two paragraphs and one video in index.html */
+
+/* NOTE: CSS for articles page */
+.articleContainer{
   display:flex;
   height: 150vh;
   font-size: 2.5vmin;
 }
 .articleContent{
-  width: 100vw;
-  height: 150vh;
+  width: 80vw;
+  height:180vh;
   flex-direction: column;
-
 }
 .articlePics{
   flex-direction:column;
   justify-content: center;
-  width: 50vw;
+  width: 40vw;
 }
 .section{
   height: 50vh;
-  margin-top:3vmin;
+  padding-top:3vmin;
   padding-left: 3vmin;
   padding-bottom: 3vmin;
   flex-direction: row;
-  border-bottom: 2px solid #8b9dc3;
+  border-bottom: 1.5px solid #8b9dc3;
 }
-.articlePics img, iframe{
-  width: 40vw;
-  margin-top:3vmin;
-  padding-bottom: 3vmin;
+.vid,.articlePics img {
   height: 50vh;
-  border-bottom: 2px solid #8b9dc3;
-} /* the above centers each image on the page*/
+  width: 40vw;
+  padding-top:3vmin;
+  padding-bottom: 3vmin;
+  border-bottom: 1.5px solid #8b9dc3;
+} /* the above defines how the thumbnail pics/video for each article and makes them stick to the left*/
+
+/* NOTE: CSS for resource page;the names of the resources/organizations and the link to their site are lined up*/
 .resourceBody{
   display:flex;
   height: 50vh;
@@ -111,3 +127,4 @@ body, html{
   flex-direction: row;
   border-bottom: 2px solid #8b9dc3;
 }
+/* NOTE: made every element on page display in flex besides the siteIcon */
