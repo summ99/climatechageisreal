@@ -57,7 +57,7 @@ a gradient from a blue to white tone;used justify content to maintain equal spac
   /*not flexed;the above specifies position and size of icon image*/
 }
 .bodyContent {
-  display:flex;
+  display:flex;  
   flex-direction: column;
   align-items:center;
   justify-content:center;
